@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:wallet_app/util/my_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -9,6 +10,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // Page Indicator
+  final _controller = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,24 +51,48 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 25,
             ),
 
             // Cards
             Container(
               height: 200,
-              child: Column(
+              child: PageView(
+                // Keeps track on which page we are currently on
+                controller: _controller,
+                scrollDirection: Axis.horizontal,
                 children: [
-                  ListView(
-                    children: [
-                      Mycard(),
-                      Mycard(),
-                      Mycard(),
-                      Mycard(),
-                    ],
+                  Mycard(
+                    balance: 5250.20,
+                    expiryMonth: 10,
+                    expiryYear: 24,
+                    color: Colors.deepPurple[400],
+                    cardNumber: 35215687,
+                  ),
+                  Mycard(
+                    balance: 342.24,
+                    expiryMonth: 20,
+                    expiryYear: 27,
+                    color: Colors.blue[400],
+                    cardNumber: 982345245,
+                  ),
+                  Mycard(
+                    balance: 420.50,
+                    expiryMonth: 12,
+                    expiryYear: 25,
+                    color: Colors.green[400],
+                    cardNumber: 902175632,
                   ),
                 ],
               ),
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            SmoothPageIndicator(
+              controller: _controller,
+              count: 3,
+              effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade800),
             ),
             // 3 buttons--> send + Pay + Bills
 
@@ -77,6 +104,5 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-
-// 16: 31 
+// 16: 31
 // https://www.youtube.com/watch?v=Nx3iQwh1Wes&t=704s
