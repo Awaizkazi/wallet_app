@@ -97,30 +97,56 @@ class _HomePageState extends State<HomePage> {
             ),
             // 3 buttons--> send + Pay + Bills
 // Send button
-            SizedBox(
-              height: 15,
-            ),
+            SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   MyButton(
                       buttonText: 'Send',
                       iconImagePath: 'lib/icons/send-money.png'),
+                  // Pay button
                   MyButton(
                       buttonText: 'Pay',
                       iconImagePath: 'lib/icons/debit-card.png'),
+                  // Bills Button
                   MyButton(
                       buttonText: 'Bills', iconImagePath: 'lib/icons/bill.png'),
                 ],
               ),
             ),
-// Pay button
-
-// Bills Button
 
             // Columns --> stats + transactions
+            // Statistics
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        child: Image.asset('lib/icons/analysis.png'),
+                        padding: EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100],
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      Column(
+                        children: [
+                          Text('Statistics'),
+                          Text('Payment and Income'),
+                        ],
+                      ),
+                      Icon(Icons.arrow_forward_ios),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            // Transactions
           ],
         ),
       ),
