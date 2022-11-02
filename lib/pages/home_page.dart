@@ -52,7 +52,21 @@ class _HomePageState extends State<HomePage> {
             ),
 
             // Cards
-            Mycard(),
+            Container(
+              height: 200,
+              child: Column(
+                children: [
+                  ListView(
+                    children: [
+                      Mycard(),
+                      Mycard(),
+                      Mycard(),
+                      Mycard(),
+                    ],
+                  ),
+                ],
+              ),
+            ),
             // 3 buttons--> send + Pay + Bills
 
             // Columns --> stats + transactions
