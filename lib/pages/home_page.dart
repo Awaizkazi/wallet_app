@@ -100,19 +100,21 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 15,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                MyButton(
-                    buttonText: 'Send',
-                    iconImagePath: 'lib/icons/send-money.png'),
-                MyButton(
-                    buttonText: 'Send',
-                    iconImagePath: 'lib/icons/send-money.png'),
-                MyButton(
-                    buttonText: 'Send',
-                    iconImagePath: 'lib/icons/send-money.png'),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  MyButton(
+                      buttonText: 'Send',
+                      iconImagePath: 'lib/icons/send-money.png'),
+                  MyButton(
+                      buttonText: 'Pay',
+                      iconImagePath: 'lib/icons/debit-card.png'),
+                  MyButton(
+                      buttonText: 'Bills', iconImagePath: 'lib/icons/bill.png'),
+                ],
+              ),
             ),
 // Pay button
 
