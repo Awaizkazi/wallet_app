@@ -135,9 +135,20 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Statistics'),
-                          Text('Payment and Income'),
+                          Text(
+                            'Statistics',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 20),
+                          ),
+                          Text(
+                            'Payment and Income',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.grey[700],
+                            ),
+                          ),
                         ],
                       ),
                       Icon(Icons.arrow_forward_ios),
