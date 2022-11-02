@@ -95,6 +95,13 @@ class _HomePageState extends State<HomePage> {
               effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade800),
             ),
             // 3 buttons--> send + Pay + Bills
+// Send button
+            Row(
+              children: [],
+            ),
+// Pay button
+
+// Bills Button
 
             // Columns --> stats + transactions
           ],
