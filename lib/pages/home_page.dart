@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wallet_app/util/my_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -51,20 +52,7 @@ class _HomePageState extends State<HomePage> {
             ),
 
             // Cards
-            Container(
-              child: Column(
-                children: [
-                  Text('Balance'),
-                  Text('\$5,250.20'),
-                  Row(
-                    children: [
-                      // card Info
-                      Text('*****   3456'),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            Mycard(),
             // 3 buttons--> send + Pay + Bills
 
             // Columns --> stats + transactions
@@ -74,3 +62,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+
+// 16: 31 
+// https://www.youtube.com/watch?v=Nx3iQwh1Wes&t=704s
