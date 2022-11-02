@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-  const MyButton({super.key});
+  final String iconImagePath;
+  final String buttonText;
+
+  const MyButton({
+    super.key,
+    required this.buttonText,
+    required this.iconImagePath,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +29,14 @@ class MyButton extends StatelessWidget {
             ],
           ),
           child: Center(
-            child: Image.asset('lib/icons/send-money.png'),
+            child: Image.asset(iconImagePath),
           ),
         ),
         SizedBox(
           height: 10,
         ),
         Text(
-          'Send',
+          buttonText,
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
