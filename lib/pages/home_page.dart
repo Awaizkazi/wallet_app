@@ -124,6 +124,7 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
                         height: 80,
@@ -134,6 +135,9 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -142,11 +146,14 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
+                          SizedBox(
+                            height: 12,
+                          ),
                           Text(
                             'Payment and Income',
                             style: TextStyle(
                               fontSize: 16,
-                              color: Colors.grey[700],
+                              color: Colors.grey[600],
                             ),
                           ),
                         ],
