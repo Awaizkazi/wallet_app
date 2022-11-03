@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:wallet_app/util/my_button.dart';
 import 'package:wallet_app/util/my_card.dart';
+import 'package:wallet_app/util/my_list_tile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -118,49 +119,21 @@ class _HomePageState extends State<HomePage> {
             ),
 
             // Columns --> stats + transactions
-            // Statistics
+
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        height: 80,
-                        child: Image.asset('lib/icons/analysis.png'),
-                        padding: EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          color: Colors.grey[100],
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Statistics',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 12,
-                          ),
-                          Text(
-                            'Payment and Income',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.grey[600],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Icon(Icons.arrow_forward_ios),
-                    ],
-                  ),
+                  // Statistics
+                  MyListTile(
+                      iconImagePath: 'lib/icons/analysis.png',
+                      tileName: 'Statistics',
+                      tileSubName: 'Payment and Income'),
+                  // Transactions
+                  MyListTile(
+                      iconImagePath: 'lib/icons/transaction.png',
+                      tileName: 'Transactions',
+                      tileSubName: 'Transactions and History'),
                 ],
               ),
             ),
