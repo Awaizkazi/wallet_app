@@ -18,6 +18,28 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
+      floatingActionButton: FloatingActionButton(
+        onPressed: (() {}),
+        backgroundColor: Colors.pink,
+        child: Icon(Icons.monetization_on),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.grey[300],
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.home),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.settings),
+            ),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -53,7 +75,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(
-              height: 25,
+              height: 15,
             ),
 
             // Cards
@@ -89,7 +111,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(
-              height: 25,
+              height: 10,
             ),
             SmoothPageIndicator(
               controller: _controller,
@@ -97,7 +119,7 @@ class _HomePageState extends State<HomePage> {
               effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade800),
             ),
             // 3 buttons--> send + Pay + Bills
-// Send button
+            // Send button
             SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -119,9 +141,8 @@ class _HomePageState extends State<HomePage> {
             ),
 
             // Columns --> stats + transactions
-
             Padding(
-              padding: const EdgeInsets.all(25.0),
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: [
                   // Statistics

@@ -19,11 +19,11 @@ class Mycard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
       child: Container(
-        width: 300,
+        width: 150,
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: color,
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(20),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,8 +46,10 @@ class Mycard extends StatelessWidget {
                 Text(cardNumber.toString(),
                     style: TextStyle(color: Colors.white)),
                 // Card Expiry Date
-                Text(expiryMonth.toString() + '/' + expiryYear.toString(),
-                    style: TextStyle(color: Colors.white)),
+                Text(
+                  expiryMonth.toString() + '/' + expiryYear.toString(),
+                  style: TextStyle(color: Colors.white),
+                ),
               ],
             ),
           ],
