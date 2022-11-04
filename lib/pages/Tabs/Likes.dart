@@ -34,6 +34,7 @@ class _LikesState extends State<Likes> {
 
   Widget LikesContainer() {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         RichText(
           text: TextSpan(
@@ -44,11 +45,34 @@ class _LikesState extends State<Likes> {
               ),
               TextSpan(
                 text: '25 September 2022 7:33PM',
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.black, fontSize: 13),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 3,
+        ),
+        RichText(
+          text: TextSpan(
+            children: [
+              TextSpan(
+                text: '@profile-id ',
+                style: TextStyle(color: Colors.blue, fontSize: 17),
               ),
               TextSpan(
-                text: '@profile-id',
-                style: TextStyle(color: Colors.blue, fontSize: 18),
+                text: 'and',
+                style: TextStyle(color: Colors.black, fontSize: 15),
+              ),
+            ],
+          ),
+        ),
+        RichText(
+          text: TextSpan(
+            children: [
+              TextSpan(
+                text: 'Others 175 liked Yor Post',
+                style: TextStyle(color: Colors.black, fontSize: 15),
               ),
             ],
           ),
