@@ -69,8 +69,7 @@ class _InteractionsState extends State<Interactions> {
                 ),
               ],
             ),
-            SizedBox(
-              height: 200,
+            Expanded(
               child: TabBarView(
                 children: [
                   Likes(),
