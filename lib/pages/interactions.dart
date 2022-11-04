@@ -1,5 +1,6 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
+import 'package:wallet_app/util/my_tab.dart';
 
 class Interactions extends StatefulWidget {
   const Interactions({super.key});
@@ -36,8 +37,8 @@ class _InteractionsState extends State<Interactions> {
         ),
       ),
       body: DefaultTabController(
-        length: 4,
-        child: Column(
+        length: 3,
+        child: Row(
           children: [
             ButtonsTabBar(
               backgroundColor: Colors.blue[600],
@@ -49,13 +50,20 @@ class _InteractionsState extends State<Interactions> {
               borderWidth: 1,
               unselectedBorderColor: Colors.blue,
               radius: 100,
-              tabs: [],
+              tabs: [ 
+                // My tabs
+                MyTab(tabBarText: 'Viewed Me'),
+                MyTab(tabBarText: 'Public Survey'),
+                MyTab(tabBarText: 'Likes'),
+              ],
             ),
             Expanded(
               child: TabBarView(
                 children: [
                   //
-
+                  MyTab(tabBarText: 'Viewed Me'),
+                  MyTab(tabBarText: 'Public Survey'),
+                  MyTab(tabBarText: 'Likes'),
                   //
 
                   //
