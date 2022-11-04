@@ -48,7 +48,7 @@ class _InteractionsState extends State<Interactions> {
                   color: Colors.blue[600], fontWeight: FontWeight.bold),
               borderWidth: 1,
               unselectedBorderColor: Colors.blue,
-              radius: 100,
+              radius: 101,
               tabs: [],
             ),
             Expanded(
