@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wallet_app/pages/Tabs/Likes.dart';
 
 import 'pages/home_page.dart';
 import 'pages/interactions.dart';
