@@ -78,12 +78,12 @@ class _LikesState extends State<Likes> {
                   ],
                 ),
               ),
-              SizedBox(height: 2),
+              SizedBox(height: 3),
               RichText(
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: 'Others 175 liked Yor Post',
+                      text: 'Others 175 liked Your Post',
                       style: TextStyle(color: Colors.black, fontSize: 15),
                     ),
                   ],
